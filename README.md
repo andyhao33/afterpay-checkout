@@ -19,6 +19,9 @@ For responsive design, use Angular Material, including Mat-card, mat-form-field,
 And make it responsive.
 Also, customize the size of mat-radio-button to fit into the expansion-panel
 
+## Install
+Please clone the repository and run "npm install"
+
 
 # AfterpayCheckout
 
