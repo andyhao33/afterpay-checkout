@@ -1,0 +1,2 @@
+<app-checkout-address [hidden]="!ifShowAddress" (continueClicked)="onContinue($event)"></app-checkout-address>
+<app-checkout-payment [hidden]="ifShowAddress" [contact] = "contact" (backClicked)="onBack($event)"></app-checkout-payment>

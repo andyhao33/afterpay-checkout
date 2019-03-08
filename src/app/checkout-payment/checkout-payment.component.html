@@ -1,0 +1,75 @@
+
+<div class="container">
+<mat-card>
+  <mat-card-title>Payment method</mat-card-title>
+<mat-accordion>
+    <mat-expansion-panel [expanded]="creditCard.checked">
+      <mat-expansion-panel-header >
+        <mat-panel-title>
+           <mat-radio-button #creditCard value="credit-card"
+           (change)="onSelectPaymentMethod('credit-card')">Credit card</mat-radio-button>
+        </mat-panel-title>
+        <mat-panel-description> 
+            Enter your credit card information
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      
+      <mat-form-field>
+          <input matInput placeholder="Card number">
+        </mat-form-field>
+    
+        <mat-form-field>
+          <input matInput placeholder="Cardholder name">
+        </mat-form-field>
+  
+        <mat-form-field>
+          <input matInput placeholder="MM/YY">
+        </mat-form-field>
+  
+        <mat-form-field>
+            <input matInput placeholder="CVV">
+          </mat-form-field>
+                
+    </mat-expansion-panel>
+    <mat-expansion-panel  [expanded]="Paypal.checked">
+      <mat-expansion-panel-header>
+          <mat-panel-title>
+           <mat-radio-button #Paypal value="paypal"
+           (change)="onSelectPaymentMethod('paypal')">Paypal</mat-radio-button>
+          </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>After clicking “Complete order”, you will be redirected to PayPal to complete your purchase securely.</p>
+
+    </mat-expansion-panel>
+     <mat-expansion-panel  [expanded] = "amazonPay.checked">
+      <mat-expansion-panel-header>
+          <mat-panel-title>
+                  <mat-radio-button #amazonPay value="amazon"
+                  (change)="onSelectPaymentMethod('amazon')">amazon Pay</mat-radio-button>
+          </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>After clicking “Complete order”, you will be redirected to amazonPay to complete your purchase securely.</p>
+    </mat-expansion-panel>
+
+  <mat-expansion-panel  [expanded] = installmentsPay.checked>
+   <mat-expansion-panel-header>
+       <mat-panel-title>
+               <mat-radio-button #installmentsPay value="installments-afterpay"
+               (change)="onSelectPaymentMethod('installments-afterpay')">Installments Pay</mat-radio-button>
+       </mat-panel-title>
+   </mat-expansion-panel-header>
+   <p>After clicking “Complete order”, you will be redirected to intallment pay to complete your purchase securely.</p>
+ </mat-expansion-panel>
+ <button mat-stroked-button (click) = "back()" style="margin:10px;">Back</button>
+ <button mat-stroked-button (click)="createOrder()"style="margin:10px;" >Complete Order</button>
+
+    
+  </mat-accordion>
+</mat-card>
+</div>
+
+
+
+
+
+  
